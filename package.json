@@ -1,0 +1,25 @@
+{
+  "name": "shape-carving",
+  "version": "0.0.1",
+  "description": "shape-carving",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pointofpresence/shape-carving.git"
+  },
+  "keywords": [
+    "voxel"
+  ],
+  "author": "pointofpresence",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pointofpresence/shape-carving/issues"
+  },
+  "homepage": "https://github.com/pointofpresence/shape-carving#readme"
+}

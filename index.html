@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Shape Carving Editor</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+        <script src="vendor/three.js/Three.js"></script>
+        <script src="vendor/three.js/Detector.js"></script>
+        <script src="vendor/three.js/Stats.js"></script>
+
+        <script src="vendor/threex/THREEx.screenshot.js"></script>
+        <script src="vendor/threex/THREEx.FullScreen.js"></script>
+        <script src="vendor/threex/THREEx.WindowResize.js"></script>
+        <script src="vendor/threex.dragpancontrols.js"></script>
+
+        <script src="jscolor/jscolor.js"></script>
+
+        <!--Mesh algorithms-->
+        <script src="js/greedy.js"></script>
+        <script src="js/shapecarve.js"></script>
+
+        <link href="css/main.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <!-- three.js container -->
+        <div id="container"></div>
+        <!-- info on screen display -->
+        <div id="info">
+            <div class="top">
+                Shape Carving Editor
+            </div>
+            <div class="bottom" id="inlineDoc">
+                - <i>p</i> for screenshot
+            </div>
+            <div class="controls">
+                <table>
+                    <tr>
+                        <td> Front: <input type="checkbox" id="frontSelect" title=""/></td>
+                        <td> Back: <input type="checkbox" id="backSelect" title=""/></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <canvas id="frontCanvas" class="editCanvas"></canvas>
+                        </td>
+                        <td>
+                            <canvas id="backCanvas" class="editCanvas"></canvas>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Top: <input type="checkbox" id="topSelect" title=""/></td>
+                        <td> Bottom: <input type="checkbox" id="bottomSelect" title=""/></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <canvas id="topCanvas" class="editCanvas"></canvas>
+                        </td>
+                        <td>
+                            <canvas id="bottomCanvas" class="editCanvas"></canvas>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Left: <input type="checkbox" id="leftSelect" title=""/></td>
+                        <td> Right: <input type="checkbox" id="rightSelect" title=""/></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <canvas id="leftCanvas" class="editCanvas"></canvas>
+                        </td>
+                        <td>
+                            <canvas id="rightCanvas" class="editCanvas"></canvas>
+                        </td>
+                    </tr>
+                </table>
+                <p> Paint: <input class="color" id="paintColor" value="ffffff" title=""/></p>
+
+                <p>
+                    <input type="button" id="clearSelected" value="Clear Selected"/>
+                    Show Guides: <input type="checkbox" id="showGuides" checked="checked"/>
+                </p>
+
+                <p>
+                    <input type="button" id="saveImage" value="Save Image"/>
+                    <input type="button" id="loadImage" value="Load Image"/>
+                    <input type="button" id="exportMesh" value="Export Mesh"/>
+                </p>
+            </div>
+        </div>
+
+        <script src="js/voxel.js"></script>
+    </body>
+</html>
